@@ -1,9 +1,6 @@
-// client/src/socket.js
 import { io } from "socket.io-client";
 
-// connect to backend server
-const socket = io("http://localhost:5000", {
-  transports: ["websocket"], // force websocket transport
+const socket = io("/api/socket", {
+  path: "/api/socket",
+  transports: ["websocket"],
 });
-
-export default socket;
